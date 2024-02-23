@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".OtherActivity">
+
+        <!-- Basic Notification Profile Button -->
+        <Button
+            android:id="@+id/basic_notification_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Basic Notification"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Auto Carousel Button -->
+        <Button
+            android:id="@+id/auto_carousel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto Carousel"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Manual Carousel Button -->
+        <Button
+            android:id="@+id/manual_carousel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manual Carousel"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Filmstrip Variant Button -->
+        <Button
+            android:id="@+id/filmstrip_varient_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filmstrip Variant"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Rating Template Button -->
+        <Button
+            android:id="@+id/rating_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rating Template"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Product Catalog Button -->
+        <Button
+            android:id="@+id/product_catalog_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Catalog"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Product Catalog Linear View -->
+        <Button
+            android:id="@+id/product_catalog_linear_view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Catalog Linear View"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Five Icons Button -->
+        <Button
+            android:id="@+id/five_icons_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Catalog"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Five Icons Button -->
+        <Button
+            android:id="@+id/timer_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Timer"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Zero Bezel Button -->
+        <Button
+            android:id="@+id/zero_bezel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zero Bezel"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Box Button -->
+        <Button
+            android:id="@+id/input_box_cta_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Box CTA"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Box Button -->
+        <Button
+            android:id="@+id/input_box_cta_remind_later_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Box CTA Remind Later"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Box Button -->
+        <Button
+            android:id="@+id/input_box_reply_as_an_event_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Box Reply as an Event"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Input Box Button -->
+        <Button
+            android:id="@+id/input_box_reply_as_an_intent_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Box Reply as an Intent"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

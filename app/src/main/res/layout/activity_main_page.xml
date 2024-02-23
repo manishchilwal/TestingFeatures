@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainPageActivity">
+
+    <TextView
+        android:id="@+id/welcome_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Update Profile Button -->
+    <Button
+        android:id="@+id/update_profile_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Profile"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Add to Cart Button -->
+    <Button
+        android:id="@+id/add_to_cart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Cart"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Product View Button -->
+    <Button
+        android:id="@+id/product_view_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product View"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Charge Button -->
+    <Button
+        android:id="@+id/charge_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Charge"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- App Inbox Button -->
+    <Button
+        android:id="@+id/app_inbox_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App Inbox"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+    <!-- Update Identity Button-->
+    <Button
+        android:id="@+id/set_identity_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Identity"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Other Button -->
+    <Button
+        android:id="@+id/other_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>
