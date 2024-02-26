@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testingfeatures"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- for using google ad id in android version 13 and above-->
     <!--<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>-->
@@ -53,10 +54,10 @@
 
         <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
-            android:value="WR7-899-766Z"/>
+            android:value="TEST-4WK-6WZ-Z76Z"/>
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="ccb-a20"/>
+            android:value="TEST-106-304"/>
     </application>
 
 </manifest>
