@@ -6,11 +6,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+//import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+//import android.os.Bundle;
+//import android.widget.TextView;
+//import android.widget.Toast;
+//
+//import com.google.firebase.database.DataSnapshot;
+//import com.google.firebase.database.DatabaseError;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.database.ValueEventListener;
+//
+//import androidx.appcompat.app.AppCompatActivity;
 
 import com.clevertap.android.sdk.CTInboxListener;
 import com.clevertap.android.sdk.CTInboxStyleConfig;
 import com.clevertap.android.sdk.CleverTapAPI;
+//import com.clevertap.android.sdk.interfaces.OnInitCleverTapIDListener;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,8 +34,12 @@ import java.util.HashMap;
 public class MainPageActivity extends AppCompatActivity implements CTInboxListener {
 
     Button updateProfileButton,addToCartButton,productViewButton,chargeButton,appInboxButton,otherButton,setIdentityButton;
-    String username;
+    String username,couponNumber;
     CleverTapAPI clevertapDefaultInstance;
+//
+//    //fcm realtime database
+//    private DatabaseReference numbersRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +62,8 @@ public class MainPageActivity extends AppCompatActivity implements CTInboxListen
         otherButton = findViewById(R.id.other_button);
         setIdentityButton = findViewById(R.id.set_identity_button);
 
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        numbersRef = database.getReference("number");
 
         updateProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +109,97 @@ public class MainPageActivity extends AppCompatActivity implements CTInboxListen
             }
         });
 
+//        chargeButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                numbersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        // Iterate through the numbers and find the first available one
+//                        for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
+//                            String value = childSnapshot.getValue(String.class);
+//                            if (value == null || value.isEmpty()) {
+//                                // Found an available number, assign it to the user
+//                                String numberKey = childSnapshot.getKey();
+//                                couponNumber = String.valueOf(numberKey);
+//
+//                                // Update the database to mark the number as used
+//                                numbersRef.child(numberKey).setValue(couponNumber);
+//
+//
+//
+//                                HashMap<String, Object> chargeDetails = new HashMap<String, Object>();
+//                                chargeDetails.put("Amount", 3000);
+//                                chargeDetails.put("Payment Mode", "Credit card");
+//                                chargeDetails.put("Charged ID", 24052013);
+//                                chargeDetails.put("CouponNo",couponNumber);
+//
+//                                HashMap<String, Object> item1 = new HashMap<String, Object>();
+//                                item1.put("Product category", "books");
+//                                item1.put("Book name", "The Millionaire next door");
+//                                item1.put("Quantity", 1);
+//
+//                                HashMap<String, Object> item2 = new HashMap<String, Object>();
+//                                item2.put("Product category", "books");
+//                                item2.put("Book name", "Achieving inner zen");
+//                                item2.put("Quantity", 1);
+//
+//                                HashMap<String, Object> item3 = new HashMap<String, Object>();
+//                                item3.put("Product category", "books");
+//                                item3.put("Book name", "Chuck it, let's do it");
+//                                item3.put("Quantity", 5);
+//
+//                                ArrayList<HashMap<String, Object>> items = new ArrayList<HashMap<String, Object>>();
+//                                items.add(item1);
+//                                items.add(item2);
+//                                items.add(item3);
+//
+//                                clevertapDefaultInstance.pushChargedEvent(chargeDetails,items);
+//
+//                                return;
+//                            }
+//                        }
+//
+//                        // If all numbers are used, display a message to the user
+//                        Toast.makeText(MainPageActivity.this, "No more numbers available", Toast.LENGTH_SHORT).show();
+//                        HashMap<String, Object> chargeDetails = new HashMap<String, Object>();
+//                        chargeDetails.put("Amount", 3000);
+//                        chargeDetails.put("Payment Mode", "Credit card");
+//                        chargeDetails.put("Charged ID", 24052013);
+//
+//                        HashMap<String, Object> item1 = new HashMap<String, Object>();
+//                        item1.put("Product category", "books");
+//                        item1.put("Book name", "The Millionaire next door");
+//                        item1.put("Quantity", 1);
+//
+//                        HashMap<String, Object> item2 = new HashMap<String, Object>();
+//                        item2.put("Product category", "books");
+//                        item2.put("Book name", "Achieving inner zen");
+//                        item2.put("Quantity", 1);
+//
+//                        HashMap<String, Object> item3 = new HashMap<String, Object>();
+//                        item3.put("Product category", "books");
+//                        item3.put("Book name", "Chuck it, let's do it");
+//                        item3.put("Quantity", 5);
+//
+//                        ArrayList<HashMap<String, Object>> items = new ArrayList<HashMap<String, Object>>();
+//                        items.add(item1);
+//                        items.add(item2);
+//                        items.add(item3);
+//
+//                        clevertapDefaultInstance.pushChargedEvent(chargeDetails,items);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//                        // Handle error
+//                        Toast.makeText(MainPageActivity.this, "Error fetching number", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//            }
+//        });
         chargeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -160,4 +273,6 @@ public class MainPageActivity extends AppCompatActivity implements CTInboxListen
     public void inboxMessagesDidUpdate() {
 
     }
+
+
 }

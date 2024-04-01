@@ -38,7 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'androidx.core:core:1.12.0'
-    implementation "com.clevertap.android:clevertap-android-sdk:6.0.0"
+    implementation "com.clevertap.android:clevertap-android-sdk:6.1.1"
 
     //push
     implementation "com.clevertap.android:push-templates:1.0.9"
@@ -57,5 +57,8 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
     implementation 'com.google.android.exoplayer:exoplayer-hls:2.19.1'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
+//
+//    //test database
+//    implementation 'com.google.firebase:firebase-database:20.3.1'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testingfeatures"
-    xmlns:tools="http://schemas.android.com/tools">
-    <!-- for using google ad id in android version 13 and above-->
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.testingfeatures">
+    <!-- for using google ad id in android version 13 and above -->
     <!--<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>-->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-
-    <!-- Required to allow the app to send events and user profile information -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!-- Recommended so that CleverTap knows when to attempt a network call -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required to allow the app to send events and user profile information -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Recommended so that CleverTap knows when to attempt a network call -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
-        android:name=".MyApplication"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -36,28 +34,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".MainPageActivity"/>
-        <activity android:name=".UpdateProfileActivity"/>
-        <activity android:name=".SetIdentityActivity"/>
-        <activity android:name=".OtherActivity"/>
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainPageActivity" />
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".SetIdentityActivity" />
+        <activity android:name=".OtherActivity" />
+
         <service
             android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-
-
         <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
-            android:value="TEST-4WK-6WZ-Z76Z"/>
+            android:value="R5K-486-ZW7Z" />
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="TEST-106-304"/>
+            android:value="6b4-352" />
+<!--        <meta-data-->
+<!--            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"-->
+<!--            android:value="1"/>-->
     </application>
 
 </manifest>
