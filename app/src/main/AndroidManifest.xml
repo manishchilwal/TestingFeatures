@@ -51,10 +51,10 @@
 
         <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
-            android:value="TEST-4WK-6WZ-Z76Z" />
+            android:value="clevertap account id" />
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="TEST-106-304" />
+            android:value="clevertap account token" />
 <!--        <meta-data-->
 <!--            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"-->
 <!--            android:value="1"/>-->
