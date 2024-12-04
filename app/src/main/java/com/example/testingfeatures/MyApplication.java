@@ -17,6 +17,7 @@ public class MyApplication extends Application implements CTPushNotificationList
     public void onCreate(){
         ActivityLifecycleCallback.register(this);
         super.onCreate();
+        CleverTapAPI.setNotificationHandler((NotificationHandler)new PushTemplateNotificationHandler());
         CleverTapAPI cleverTapAPI = CleverTapAPI.getDefaultInstance(getApplicationContext());
         cleverTapAPI.setCTPushNotificationListener(this);
     }
