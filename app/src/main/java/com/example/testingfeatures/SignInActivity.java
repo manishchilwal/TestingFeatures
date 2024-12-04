@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.clevertap.android.sdk.CleverTapAPI;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -46,6 +47,13 @@ public class SignInActivity extends AppCompatActivity {
                 String phone = phoneEditText.getText().toString().trim();
                 String username = usernameEditText.getText().toString().trim();
 
+                ArrayList<String> subname = new ArrayList<>();
+                subname.add("Marketing");
+                subname.add("Transactional");
+
+                HashMap<String, Object> subscriptionInfo = new HashMap<>();
+                subscriptionInfo.put("email",subname);
+
                 HashMap<String, Object> profileUpdate = new HashMap<String, Object>();
                 profileUpdate.put("Name", name);
                 profileUpdate.put("Email", email);
@@ -58,6 +66,7 @@ public class SignInActivity extends AppCompatActivity {
                 profileUpdate.put("MSG-push", true);
                 profileUpdate.put("MSG-sms", false);
                 profileUpdate.put("MSG-whatsapp", true);
+                profileUpdate.put("category-unsubscribe",subscriptionInfo);
 
                 clevertapDefaultInstance.onUserLogin(profileUpdate);
                 Intent intent = new Intent(SignInActivity.this, MainPageActivity.class);
